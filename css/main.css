@@ -1,3 +1,5 @@
+.contents { background-color: #dfdfdf; }
+
 .main-visual { position: relative; overflow: hidden; }
 
 .main-visual__list { margin: 0; padding: 0; }
@@ -14,7 +16,7 @@
 
 .main-visual__box.type-right { right: calc(50% - 570px); }
 
-.main-visual__head { margin: 0; font-family: "Roboto", sans-serif; font-size: 90px; font-weight: 500; color: #fff; line-height: 0.95; text-transform: uppercase; }
+.main-visual__head { margin: 0; font-family: "Roboto", sans-serif; font-size: 90px; font-weight: 500; color: #879997; line-height: 0.95; }
 
 .main-visual__link { display: block; position: relative; width: 180px; margin: 30px 0 0 10px; padding: 5px 10px; border: 2px solid #879997; font-family: "Roboto", sans-serif; font-weight: 500; color: #879997; text-align: left; text-decoration: none; }
 
@@ -46,35 +48,69 @@
 
 .main-visual__arrow-link + .main-visual__arrow-link { margin-left: 30px; }
 
-.category { margin-top: -275px; margin-left: 9.16%; background-color: #fff; }
+.featured { position: relative; margin-top: -275px; margin-left: 9.16%; }
 
-.category__list { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; margin: 0; padding: 0; }
+.featured__outer { padding: 80px; background-color: #fff; }
 
-.category__item { -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-preferred-size: 50%; flex-basis: 50%; position: relative; padding-bottom: 40%; list-style: none; }
+.featured__list { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; margin: 0; padding: 0; }
 
-.category__item.type-women .category__wrap { background: url("../images/main/category_img_1.jpg") center center/cover; }
+.featured__item { -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; position: relative; padding-bottom: 40%; list-style: none; }
 
-.category__item.type-men .category__wrap { background: url("../images/main/category_img_2.jpg") center center/cover; }
+.featured__item.nth-1 .featured__wrap { background: url("../images/main/featured_img_1.gif") center center/cover; }
 
-.category__item.type-child .category__wrap { background: url("../images/main/category_img_3.jpg") center center/cover; }
+.featured__item.nth-2 .featured__wrap { background: url("../images/main/featured_img_2.jpg") center center/cover; }
 
-.category__wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.featured__item.nth-3 .featured__wrap { background: url("../images/main/featured_img_3.jpg") center center/cover; }
 
-.category__inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 100%; }
+.featured__wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.category__box { text-align: center; }
+.featured__inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100%; height: 100%; }
 
-.category__head { margin: 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 300; color: #879997; text-transform: uppercase; }
+.featured__box { text-align: center; }
 
-.category__txt { margin: 0; font-family: "Roboto", sans-serif; font-size: 14px; color: #fff; opacity: 0.8; }
+.featured__head { margin: 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 300; color: #879997; line-height: 1; }
 
-.category__link { display: block; position: relative; width: 180px; margin: 60px auto 0; padding: 5px 10px; border: 2px solid #879997; font-family: "Roboto", sans-serif; font-weight: 500; color: #879997; text-align: left; text-decoration: none; }
+.collection { margin: 80px 13.16%; }
 
-.category__link:before, .category__link:after { content: ''; position: absolute; right: 10px; height: 2px; background-color: #879997; }
+.collection__list { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: -40px 0 0 -40px; padding: 0; font-size: 0; }
 
-.category__link:before { top: 0; bottom: 0; margin: auto; width: 20px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.collection__item { -webkit-box-flex: 1; -ms-flex: 1 1 25%; flex: 1 1 25%; max-width: 25%; padding: 40px 0 0 40px; list-style: none; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.category__link:after { top: 10px; width: 10px; -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+.collection__wrap { position: relative; }
 
-.category__link:hover:before { width: 100%; }
+.collection__box { position: relative; padding-bottom: 100%; overflow: hidden; }
+
+.collection__link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.collection__link:before, .collection__link:after { content: ''; position: absolute; right: 10px; height: 2px; background-color: #879997; z-index: 10; }
+
+.collection__link:before { bottom: 13px; width: 20px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+.collection__link:after { bottom: 16px; width: 10px; -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+
+.collection__link:hover:before { width: 100%; }
+
+.collection__img { position: absolute; width: 100%; }
+
+.journal { margin: 0 9.16%; }
+
+.journal__wrap { padding: 80px; background-color: #fff; }
+
+.journal__head { margin: 0; font-family: "Roboto", sans-serif; font-size: 54px; font-weight: 300; color: #879997; }
+
+.journal__tit { margin: 20px 0 0; font-size: 16px; }
+
+.journal__txt { max-width: 800px; margin: 15px 0 0; line-height: 1.7; }
+
+.journal__link { display: block; position: relative; width: 200px; margin: 30px 0 0; padding: 7px 10px 5px; border: 2px solid #879997; font-family: "Roboto", sans-serif; font-weight: 500; color: #879997; text-align: left; text-decoration: none; }
+
+.journal__link:before, .journal__link:after { content: ''; position: absolute; right: 10px; height: 2px; background-color: #879997; }
+
+.journal__link:before { top: 0; bottom: 0; margin: auto; width: 20px; -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+.journal__link:after { top: 11px; width: 10px; -webkit-transform: rotate(30deg); transform: rotate(30deg); }
+
+.journal__link:hover:before { width: 100%; }
+
+.journal__img { margin-top: 30px; width: 100%; }
 /*# sourceMappingURL=main.css.map */
