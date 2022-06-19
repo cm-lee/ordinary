@@ -1,0 +1,88 @@
+header{}
+
+.header{position: fixed;top: 0;left: 0;width: 100vw;max-width: 1920px;padding: 40px 70px;box-sizing: border-box;z-index: 100;
+    &__wrap{display: flex;flex-wrap: wrap;justify-content: space-between;align-items: center;}
+    &__logo{order: 2;width: 76px;height: 100%;margin: 0;}
+    &__link{font-size: 32px;color: $color-black;text-decoration: none;}
+}
+
+.gnb{order: 1;}
+
+.hamburger{
+    &__link{text-decoration: none;}
+    &__box{display: inline-block;width: 40px;}
+    &__line{display: block;width: 100%;height: 2px;background-color: $color-black;
+        & + &{margin-top: 6px;}
+    }
+    &__txt{display: inline-block;margin: 0 0 0 20px;font-family: $font-eng;font-weight: 400;color: $color-black;text-transform: uppercase;}
+}
+
+.nav{position: fixed;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;visibility: hidden;
+    $this:&;
+
+    &.is-active{z-index: 300;overflow-y: scroll;overflow-x: hidden;opacity: 1;visibility: visible;
+        #{$this}__wrap{transform: translate3d(0, 0, 0);}
+        #{$this}__overlay{opacity: 1;}
+    }
+
+    &__wrap{position: relative;width: 500px;height: 100%;min-height: 100%;background-color: $color-white;transform: translate3d(-1000px, 0, 0);overflow: initial;transition: all 0.5s;}
+    &__outer{display: flex;flex-direction: column;justify-content: space-between;position: relative;height: 100%;}
+    &__inner{padding: 60px 80px;background-color: $color-white;}
+    &__close{position: absolute;top: 0;right: 0;padding: 10px;text-indent: -9999px;overflow: hidden;}
+    &__area{position: relative;width: 20px;height: 20px;
+        &:before, &:after{content: '';position: absolute;top: 0;left: 0;bottom: 0;width: 100%;height: 1px;margin: auto;background-color: $color-black;transform: rotate(45deg);}
+        &:after{transform: rotate(-45deg);}
+    }
+
+    &__overlay{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.3);z-index: -1;opacity: 0;}
+
+    // nav list
+    &__list{margin: 0;padding: 0;}
+    &__item{list-style: none;
+        & + &{margin-top: 30px;}
+        &.is-open{
+            #{$this}__depth2-list{height: auto;opacity: 1;}
+            #{$this}__link{
+                &:after{transform: rotate(0);}
+            }
+        }
+    }
+    &__link{display: block;position: relative;padding: 10px 0;font-family: $font-eng;font-size: 24px;color: $color-black;text-decoration: none;text-transform: uppercase;
+        &:before, &:after{content: '';position: absolute;top: 0;right: 0;bottom: 0;width: 10px;height: 2px;margin: auto;background-color: $color-black;}
+        &:after{transform: rotate(90deg);transition: transform 0.3s;}
+    }
+
+    &__depth2-list{height: 0;margin: 0;padding: 0;opacity: 0;transition: all 0.6s cubic-bezier(.42, .2, .08, 1);overflow: hidden;}
+    &__depth2-item{list-style: none;
+        & + &{margin-top: 20px;}
+    }
+    &__depth2-link{font-family: $font-eng;font-size: 14px;color: $color-black;text-decoration: none;text-transform: capitalize;}
+
+    &__depth3-list{margin: 15px 0 0 20px;padding: 0;}
+    &__depth3-item{list-style: none;
+        & + &{margin-top: 10px;}
+    }
+    &__depth3-link{position: relative;font-size: 14px;color: $color-black;text-decoration: none;transition: padding-left 0.3s;
+        &:after{content: '';position: absolute;top: 0;left: 0;bottom: 0;width: 10px;height: 2px;margin: auto;background-color: $color-black;opacity: 0;transition: opacity 0.3s;}
+
+        &:hover{
+            padding-left: 20px;
+            &:after{opacity: 1;}
+        }
+    }
+}
+
+.info{padding: 30px 80px;background-color: $color-normal;
+    &__list{margin: 0;padding: 0;}
+    &__item{list-style: none;}
+    &__link{display: block;position: relative;padding: 15px 0;font-family: $font-eng;font-size: 14px;color: $color-black;text-decoration: none;transition: padding-left 0.3s;
+        &:after{content: '';position: absolute;top: 0;left: 0;bottom: 0;width: 10px;height: 2px;margin: auto;background-color: $color-black;opacity: 0;transition: opacity 0.3s;}
+
+        &:hover{
+            padding-left: 20px;
+            &:after{opacity: 1;}
+        }
+    }
+}
+
+.toolbox{order: 3;}
