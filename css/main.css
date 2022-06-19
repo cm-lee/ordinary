@@ -52,11 +52,11 @@
 
 .category__item { -ms-flex-wrap: wrap; flex-wrap: wrap; -ms-flex-preferred-size: 50%; flex-basis: 50%; position: relative; padding-bottom: 40%; list-style: none; }
 
-.category__item.type-women .category__wrap { background: url("/images/main/category_img_1.jpg") center center/cover; }
+.category__item.type-women .category__wrap { background: url("../images/main/category_img_1.jpg") center center/cover; }
 
-.category__item.type-men .category__wrap { background: url("/images/main/category_img_2.jpg") center center/cover; }
+.category__item.type-men .category__wrap { background: url("../images/main/category_img_2.jpg") center center/cover; }
 
-.category__item.type-child .category__wrap { background: url("/images/main/category_img_3.jpg") center center/cover; }
+.category__item.type-child .category__wrap { background: url("../images/main/category_img_3.jpg") center center/cover; }
 
 .category__wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
